@@ -1,10 +1,23 @@
-
-import { Box, Button, Flex, Heading, Icon, Table, Th, Thead, Tr, Checkbox, Tbody, Td, Text } from "@chakra-ui/react";
+import {
+    Box,
+    Button,
+    Flex,
+    Heading,
+    Icon,
+    Table,
+    Th,
+    Thead,
+    Tr,
+    Checkbox,
+    Tbody,
+    Td,
+    Text,
+} from "@chakra-ui/react";
 import React from "react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
+import { Pagination } from "../../components/Pagination";
 import { Sidebar } from "../../components/SideBar";
-
 
 export default function UserList() {
     return (
@@ -14,13 +27,20 @@ export default function UserList() {
                 <Sidebar />
                 <Box flex="1" borderRadius={8} bg="gray.800" p="8">
                     <Flex mb="8" justify="space-between" align="center">
-                        <Heading size="lg" fontWeight="normal">Usuários</Heading>
+                        <Heading size="lg" fontWeight="normal">
+                            Usuários
+                        </Heading>
 
-                        <Button as="a" size="sm" colorScheme="pink" leftIcon={<Icon as={RiAddLine} fontSize={20} />}>
+                        <Button
+                            as="a"
+                            size="sm"
+                            colorScheme="pink"
+                            leftIcon={<Icon as={RiAddLine} fontSize={20} />}
+                        >
                             Criar novo
                         </Button>
                     </Flex>
-                    <Table >
+                    <Table>
                         <Thead>
                             <Tr>
                                 <Th px="6" color="gray.300" width="8">
@@ -38,55 +58,83 @@ export default function UserList() {
                                 </Td>
                                 <Td>
                                     <Box>
-                                        <Text fontWeight="bold">Artur Ceschin</Text>
-                                        <Text fontSize="sm" color="gray.300">artur.ceschin@gmail.com</Text>
+                                        <Text fontWeight="bold">
+                                            Artur Ceschin
+                                        </Text>
+                                        <Text fontSize="sm" color="gray.300">
+                                            artur.ceschin@gmail.com
+                                        </Text>
                                     </Box>
                                 </Td>
                                 <Td>04 de Agosto, 2021</Td>
                                 <Td>
-                                    <Button as="a" size="sm" colorScheme="purple" leftIcon={<Icon as={RiPencilLine} />}>
+                                    <Button
+                                        as="a"
+                                        size="sm"
+                                        colorScheme="purple"
+                                        leftIcon={<Icon as={RiPencilLine} />}
+                                    >
                                         Editar
                                     </Button>
                                 </Td>
                             </Tr>
-                            <Tr >
+                            <Tr>
                                 <Td px="6">
                                     <Checkbox colorScheme="pink" />
                                 </Td>
                                 <Td>
                                     <Box>
-                                        <Text fontWeight="bold">Artur Ceschin</Text>
-                                        <Text fontSize="sm" color="gray.300">artur.ceschin@gmail.com</Text>
+                                        <Text fontWeight="bold">
+                                            Artur Ceschin
+                                        </Text>
+                                        <Text fontSize="sm" color="gray.300">
+                                            artur.ceschin@gmail.com
+                                        </Text>
                                     </Box>
                                 </Td>
                                 <Td>04 de Agosto, 2021</Td>
                                 <Td>
-                                    <Button as="a" size="sm" colorScheme="purple" leftIcon={<Icon as={RiPencilLine} />}>
+                                    <Button
+                                        as="a"
+                                        size="sm"
+                                        colorScheme="purple"
+                                        leftIcon={<Icon as={RiPencilLine} />}
+                                    >
                                         Editar
                                     </Button>
                                 </Td>
                             </Tr>
-                            <Tr >
+                            <Tr>
                                 <Td px="6">
                                     <Checkbox colorScheme="pink" />
                                 </Td>
                                 <Td>
                                     <Box>
-                                        <Text fontWeight="bold">Artur Ceschin</Text>
-                                        <Text fontSize="sm" color="gray.300">artur.ceschin@gmail.com</Text>
+                                        <Text fontWeight="bold">
+                                            Artur Ceschin
+                                        </Text>
+                                        <Text fontSize="sm" color="gray.300">
+                                            artur.ceschin@gmail.com
+                                        </Text>
                                     </Box>
                                 </Td>
                                 <Td>04 de Agosto, 2021</Td>
                                 <Td>
-                                    <Button as="a" size="sm" colorScheme="purple" leftIcon={<Icon as={RiPencilLine} />}>
+                                    <Button
+                                        as="a"
+                                        size="sm"
+                                        colorScheme="purple"
+                                        leftIcon={<Icon as={RiPencilLine} />}
+                                    >
                                         Editar
                                     </Button>
                                 </Td>
                             </Tr>
                         </Tbody>
                     </Table>
+                    <Pagination />
                 </Box>
             </Flex>
         </Box>
-    )
+    );
 }
